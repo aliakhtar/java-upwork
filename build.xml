@@ -55,4 +55,10 @@
     </delete>
     <echo message="clean done" />
   </target>
+
+  <target name="jar">
+    <jar destfile="fat.jar" basedir="${basedir}">
+      <zipgroupfileset dir="lib" includes="*.jar"/>
+    </jar>
+  </target>
 </project>
